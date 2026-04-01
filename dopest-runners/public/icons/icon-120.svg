@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 120 120">
+  <rect width="120" height="120" fill="#000000"/>
+  <text x="60" y="72" text-anchor="middle" 
+    font-family="Arial Black, Arial, sans-serif" font-weight="900"
+    font-size="44" fill="#CDFF00" letter-spacing="-2">DR</text>
+  <text x="60" y="91" text-anchor="middle"
+    font-family="Arial, sans-serif" font-weight="400"
+    font-size="9" fill="#444444" letter-spacing="2">RUNNERS</text>
+  <rect x="9" y="107" width="102" height="3" fill="#CDFF00"/>
+</svg>
