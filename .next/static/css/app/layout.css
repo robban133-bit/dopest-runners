@@ -1,0 +1,203 @@
+/*!*****************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[3]!./src/app/globals.css ***!
+  \*****************************************************************************************************************************************************************************************************************************************************************/
+/* src/app/globals.css */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap');
+
+/* ── Reset ──────────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+::-webkit-scrollbar { width: 0; background: transparent; }
+
+/* ── Root ───────────────────────────────────────────────── */
+:root {
+  --accent:  #CDFF00;
+  --bg:      #000000;
+  --card:    #0C0C0C;
+  --border:  #1C1C1C;
+  --muted:   #555555;
+  --danger:  #ff4444;
+  --max-w:   430px;
+
+  --font-display: 'Bebas Neue', cursive;
+  --font-body:    'Barlow', sans-serif;
+  --font-mono:    'Space Mono', monospace;
+}
+
+html, body {
+  background: var(--bg);
+  color: #fff;
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* Prevent text size adjust on iOS rotation */
+  -webkit-text-size-adjust: 100%;
+}
+
+/* ── App Shell ───────────────────────────────────────────── */
+#app-root {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  min-height: 100svh;          /* svh = small viewport height (handles mobile chrome bar) */
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+  background: var(--bg);
+}
+
+/* ── Utility ─────────────────────────────────────────────── */
+.hd  { font-family: var(--font-display); letter-spacing: 0.04em; }
+.mn  { font-family: var(--font-mono); }
+.muted { color: var(--muted); }
+
+/* ── Screen animation ────────────────────────────────────── */
+.screen {
+  min-height: 100svh;
+  min-height: 100vh;
+  padding-bottom: 90px;
+  animation: fadeUp 0.22s ease both;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes popIn {
+  0%  { transform: scale(0.75); opacity: 0; }
+  60% { transform: scale(1.08); }
+  100%{ transform: scale(1);    opacity: 1; }
+}
+
+@keyframes scanLine {
+  0%, 100% { top: 4%; }
+  50%       { top: 88%; }
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.35; }
+}
+
+/* ── Button system ───────────────────────────────────────── */
+.btn {
+  display: block; width: 100%;
+  padding: 16px; border: none; cursor: pointer;
+  font-family: var(--font-display); font-size: 18px; letter-spacing: 0.1em;
+  transition: all 0.15s ease; text-align: center; text-decoration: none;
+}
+.btn:disabled { opacity: 0.5; cursor: not-allowed; transform: none !important; }
+
+.btn-primary  { background: var(--accent); color: #000; }
+.btn-primary:hover:not(:disabled) { background: #d9ff33; transform: translateY(-1px); }
+
+.btn-outline  { background: transparent; color: #fff; border: 1px solid #2a2a2a; }
+.btn-outline:hover:not(:disabled) { border-color: #fff; }
+
+.btn-ghost    { background: transparent; color: var(--muted); border: 1px solid #1a1a1a; font-size: 14px; }
+.btn-ghost:hover:not(:disabled) { border-color: #333; color: #888; }
+
+.btn-danger   { background: transparent; color: var(--danger); border: 1px solid #2a1010; font-size: 14px; }
+.btn-danger:hover:not(:disabled) { border-color: var(--danger); background: #ff444410; }
+
+/* ── Input system ────────────────────────────────────────── */
+.inp {
+  width: 100%; background: #0A0A0A; border: 1px solid var(--border);
+  color: #fff; padding: 14px 16px; font-family: var(--font-body); font-size: 15px;
+  outline: none; transition: border-color 0.2s; -moz-appearance: none; appearance: none; -webkit-appearance: none;
+  border-radius: 0;
+}
+.inp:focus   { border-color: var(--accent); }
+.inp::placeholder { color: #383838; }
+.inp.error   { border-color: var(--danger) !important; }
+.inp-label   { display: block; color: var(--muted); font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.1em; margin-bottom: 8px; }
+.inp-error   { color: var(--danger); font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.06em; margin-top: 5px; }
+
+/* ── Card ────────────────────────────────────────────────── */
+.card { background: var(--card); border: 1px solid var(--border); padding: 20px; }
+
+/* ── Divider row ─────────────────────────────────────────── */
+.divrow {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 15px 0; border-bottom: 1px solid #161616;
+}
+
+/* ── Tags ────────────────────────────────────────────────── */
+.tag {
+  display: inline-block; padding: 3px 9px; border: 1px solid #2a2a2a;
+  font-family: var(--font-mono); font-size: 10px; color: #666; letter-spacing: 0.08em;
+}
+.tag-accent { background: var(--accent); color: #000; border-color: var(--accent); }
+
+/* ── Bottom nav ──────────────────────────────────────────── */
+.nav-bar {
+  position: fixed; bottom: 0; left: 50%; transform: translateX(-50%);
+  width: 100%; max-width: var(--max-w);
+  background: rgba(0,0,0,0.96); border-top: 1px solid #1A1A1A;
+  display: flex; z-index: 100; -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px);
+  /* Safe area for iPhone home indicator */
+  padding-bottom: env(safe-area-inset-bottom, 0);
+}
+.nav-item {
+  flex: 1 1; display: flex; flex-direction: column; align-items: center; gap: 3px;
+  padding: 11px 8px 14px; cursor: pointer; background: none; border: none;
+  color: #3a3a3a; transition: color 0.15s;
+  font-family: var(--font-display); font-size: 10px; letter-spacing: 0.12em;
+}
+.nav-item.active { color: var(--accent); }
+.nav-item:hover:not(.active) { color: #666; }
+
+/* ── Tabs ────────────────────────────────────────────────── */
+.tab-row { display: flex; border-bottom: 1px solid var(--border); }
+.tab-btn {
+  flex: 1 1; padding: 13px 6px; background: none; border: none;
+  border-bottom: 2px solid transparent; color: #444; cursor: pointer;
+  font-family: var(--font-display); font-size: 12px; letter-spacing: 0.1em;
+  transition: all 0.15s;
+}
+.tab-btn.active  { border-bottom-color: var(--accent); color: var(--accent); }
+.tab-btn:hover:not(.active) { color: #777; }
+
+/* ── Level track ─────────────────────────────────────────── */
+.lvl-track { height: 3px; background: #1a1a1a; flex: 1 1; }
+.lvl-fill  { height: 100%; background: var(--accent); transition: width 0.7s ease; }
+
+/* ── Spinner ─────────────────────────────────────────────── */
+.spinner {
+  width: 20px; height: 20px; border: 2px solid #333;
+  border-top-color: var(--accent); border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* ── Toast ───────────────────────────────────────────────── */
+.toast {
+  position: fixed; top: 20px; left: 50%; transform: translateX(-50%);
+  padding: 11px 22px; font-family: var(--font-display); font-size: 15px;
+  letter-spacing: 0.1em; z-index: 9999; white-space: nowrap;
+  animation: popIn 0.2s ease both;
+}
+.toast.success { background: var(--accent); color: #000; box-shadow: 0 4px 24px #CDFF0066; }
+.toast.error   { background: var(--danger); color: #fff; box-shadow: 0 4px 24px #ff333366; }
+
+/* ── Safe area padding for notched phones ────────────────── */
+.safe-top    { padding-top: env(safe-area-inset-top, 0); }
+.safe-bottom { padding-bottom: env(safe-area-inset-bottom, 0); }
+
+/* ── Social buttons ──────────────────────────────────────── */
+.social-btn {
+  flex: 1 1; display: flex; align-items: center; justify-content: center; gap: 8px;
+  padding: 13px; border: 1px solid var(--border); color: var(--muted);
+  text-decoration: none; font-family: var(--font-display); font-size: 13px;
+  letter-spacing: 0.08em; transition: all 0.15s; cursor: pointer;
+}
+.social-btn:hover { border-color: var(--muted); color: #ccc; }
+
+/* ── PWA install banner ───────────────────────────────────── */
+.install-banner {
+  position: fixed; bottom: 90px; left: 50%; transform: translateX(-50%);
+  width: calc(100% - 32px); max-width: 398px;
+  background: #0C0C0C; border: 1px solid var(--accent);
+  padding: 14px 18px; display: flex; align-items: center; gap: 14px;
+  z-index: 50; animation: fadeUp 0.3s ease;
+}
+

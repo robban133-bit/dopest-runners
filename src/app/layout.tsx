@@ -1,4 +1,3 @@
-// src/app/layout.tsx
 import type { Metadata, Viewport } from 'next';
 import { AuthProvider } from '@/context/AuthContext';
 import './globals.css';
@@ -11,9 +10,6 @@ export const metadata: Metadata = {
     capable: true,
     statusBarStyle: 'black-translucent',
     title: 'Dopest Runners',
-  },
-  other: {
-    'mobile-web-app-capable': 'yes',
   },
 };
 
@@ -29,17 +25,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <head>
-        {/* PWA apple touch icons */}
-        <link rel="apple-touch-icon" sizes="180x180" href="/icons/icon-180.png" />
-        <link rel="apple-touch-icon" sizes="152x152" href="/icons/icon-152.png" />
-        <link rel="apple-touch-icon" sizes="120x120" href="/icons/icon-120.png" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/icons/icon-180.svg" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-        {/* Service worker registration */}
         <script
           dangerouslySetInnerHTML={{
             __html: `
-              if ('serviceWorker' in navigator) {
+              if ('serviceWorker' in navigator && location.hostname !== 'localhost') {
                 window.addEventListener('load', () => {
                   navigator.serviceWorker.register('/sw.js')
                     .catch(err => console.warn('SW registration failed:', err));

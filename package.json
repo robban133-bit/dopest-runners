@@ -10,30 +10,32 @@
     "seed-admin": "tsx scripts/seed-admin.ts"
   },
   "dependencies": {
-    "next": "14.2.5",
-    "react": "^18",
-    "react-dom": "^18",
+    "bcryptjs": "^2.4.3",
+    "clsx": "^2.1.1",
+    "dotenv": "^17.4.0",
     "firebase": "^10.12.0",
     "firebase-admin": "^12.2.0",
+    "html5-qrcode": "^2.3.8",
     "jsonwebtoken": "^9.0.2",
-    "bcryptjs": "^2.4.3",
+    "next": "14.2.5",
     "qrcode": "^1.5.4",
-    "recharts": "^2.12.7",
-    "zustand": "^4.5.4",
+    "react": "^18",
+    "react-dom": "^18",
     "react-hook-form": "^7.52.1",
+    "recharts": "^2.12.7",
     "zod": "^3.23.8",
-    "clsx": "^2.1.1"
+    "zustand": "^4.5.4"
   },
   "devDependencies": {
+    "@types/bcryptjs": "^2.4.6",
+    "@types/jsonwebtoken": "^9.0.6",
     "@types/node": "^20",
+    "@types/qrcode": "^1.5.5",
     "@types/react": "^18",
     "@types/react-dom": "^18",
-    "@types/jsonwebtoken": "^9.0.6",
-    "@types/bcryptjs": "^2.4.6",
-    "@types/qrcode": "^1.5.5",
-    "typescript": "^5",
-    "tsx": "^4.16.2",
     "eslint": "^8",
-    "eslint-config-next": "14.2.5"
+    "eslint-config-next": "14.2.5",
+    "tsx": "^4.16.2",
+    "typescript": "^5"
   }
 }

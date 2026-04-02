@@ -1,0 +1,11 @@
+{
+  "/_not-found/page": "app/_not-found/page.js",
+  "/(auth)/login/page": "app/(auth)/login/page.js",
+  "/api/auth/verify-admin/route": "app/api/auth/verify-admin/route.js",
+  "/api/session/route": "app/api/session/route.js",
+  "/admin/page": "app/admin/page.js",
+  "/(auth)/register/page": "app/(auth)/register/page.js",
+  "/(app)/profile/page": "app/(app)/profile/page.js",
+  "/(app)/home/page": "app/(app)/home/page.js",
+  "/(app)/checkin/page": "app/(app)/checkin/page.js"
+}

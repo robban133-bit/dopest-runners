@@ -46,14 +46,10 @@ export default function LoginPage() {
       const { isAdmin } = await res.json();
       router.replace(isAdmin ? '/admin' : '/home');
     } catch (err: any) {
-      const code = err?.code || '';
-      if (code.includes('invalid-credential') || code.includes('wrong-password') || code.includes('user-not-found')) {
-        setError('Invalid username or password.');
-      } else {
-        setError('Login failed. Please try again.');
-      }
-      setLoading(false);
-    }
+  console.error('LOGIN ERROR:', err);
+  setError('Error: ' + (err?.code || err?.message || 'Unknown error'));
+  setLoading(false);
+}
   };
 
   return (
